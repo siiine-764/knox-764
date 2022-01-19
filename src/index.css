@@ -1,0 +1,40 @@
+
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+table{
+  background-color: aqua;
+}
+
+
+#SwitchColor{
+  border:5px solid black;
+  padding:50px;
+  margin:50px;
+}
+
+.links {
+height: 0;
+overflow: hidden;
+list-style-type: none;
+font-weight: bold;
+}
+
+.show-nav {
+  height: 120px;
+}
+
+/* Media screen size */
+@media screen and (min-width: 768px) {
+
+
+  .links {
+      height: auto;
+      display: flex;
+  }
+
+}
+
