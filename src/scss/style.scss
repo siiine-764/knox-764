@@ -105,6 +105,7 @@ body {
    
    font-family: 'Roboto', sans-serif;
    transition:.25s;
+   background-color: #262626;
 
    .credit {
       position: absolute;
@@ -415,7 +416,8 @@ nav {
    border: 1px solid #e3573c !important;
    color: #e3573c !important ;
    border-radius: 5px;
-   margin-left: 10px;
+   margin-top: 10px;
+   margin-bottom: -10px;
  }
  #btn:hover {
    background-color: #e3583c42 !important;
@@ -518,3 +520,221 @@ article {
   margin: 0 auto;
   padding: 10px;
 }
+
+
+#linkgmail{
+  transform: rotate(90deg);
+  z-index: 10;
+  position:fixed;
+  bottom:230px;
+  right: 0;
+  font-size: 15px;
+}
+#linkgmail::after {
+content: "";
+display: block;
+position: relative;
+top: -10px;
+width: 100%;
+height: 1px;
+bottom:0px;
+margin-left: 210px;
+background-color: #8892b0;
+}
+
+#linkgmail a{
+color:#8892b0;
+text-decoration: none;
+}
+#linkgmail a:hover{
+  text-decoration: none;
+}
+
+#socail_media{
+  transform: rotate(90deg);
+  z-index: 10;
+  position:fixed;
+  bottom:180px;
+}
+#socail_media::after {
+content: "";
+display: block;
+position: relative;
+top: -10px;
+width: 100%;
+height: 1px;
+bottom:0px;
+margin-left: 210px;
+background-color: #8892b0;
+}
+
+#socail_media a{
+color:#8892b0;
+text-decoration: none;
+display: inline-block;
+transform: rotate(-90deg);
+padding-right: 15px;
+padding-bottom:100px;
+margin-bottom:-45px;
+}
+#socail_media a:hover{
+  text-decoration: none;
+}
+//
+.container-fluid {
+  background-color: #2b2a2a !important;
+}
+b {
+  color: #e3573c;
+}
+ ul li {
+  margin-top: -2px;
+}
+ul li a,h2 {
+  color: #ccd6f6 !important;
+  font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono",
+    monospace;
+}
+ul li a:hover {
+  color: #e3573c !important;
+}
+.btn {
+  border: 1px solid #e3573c;
+  color: #e3573c !important ;
+  border-radius: 5px;
+  margin: 0px 10px;
+  padding: 8px 20px !important;
+}
+.btn:hover {
+  background-color: #e3583c42 !important;
+}
+i {
+  color: #e3573c;
+  font-size: 25px;
+}
+
+#topheader {
+  font-size: 16px;
+  margin-bottom: -20px;
+  color: #e3573c;
+  font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono",
+    monospace;
+  margin-top: 50px;
+}
+#name {
+  font-size: 61.32px;
+  font-weight: 700;
+  color: #ccd6f6;
+  font-family: Calibre, "San Francisco", "SF Pro Text", -apple-system,
+    system-ui, sans-serif;
+}
+#alsoname {
+  font-size: 61.52px;
+  font-weight: 700;
+  color:  #8892b0 !important;
+  font-family: Calibre, "San Francisco", "SF Pro Text", -apple-system,
+    system-ui, sans-serif;
+}
+#paragraph,p {
+  font-size: 20px;
+  color: #8892b0;
+  font-family: Calibre, "San Francisco", "SF Pro Text", -apple-system,
+    system-ui, sans-serif;
+  margin-bottom: 50px;
+}
+#paragraph #btn-GetInTouch {
+  font-size: 20px;
+  font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono",
+    monospace;
+  color: #e3573c;
+  border: 1px solid #e3573c;
+  border-radius: 5px;
+  padding: 20px 35px;
+  margin-top: 50px;
+}
+#paragraph #btn-GetInTouch:hover {
+  background-color: #e3583c42 !important;
+  text-decoration: none;
+}
+
+svg {
+  height: 60vh;
+  position:fixed;
+}
+  svg text {
+    font-size: 33px;
+    font-family: Helvetica Neue, sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 21px;
+    fill: #8892b0;
+  }
+
+
+  //
+  
+  $text-color: #8892b0;
+  $border-color: #8892b0;
+  $border-color-on-hover:  #e3573c;
+  
+  
+  .retab {
+    display: flex;
+    flex-direction: row;
+    margin: 0px auto;
+    width: 800px;
+  
+    .retab__tablist {
+      display: flex;
+      flex-direction: column;
+      margin-right: 1em;
+  
+      .retab__tablist__tab {
+        padding: 15px;
+        font-size: 15px;
+        color: $text-color;
+        cursor: pointer;
+        text-align: left;
+
+        border-right: .15em solid $border-color;
+        &:hover, &.selected  {
+          border-right-color: $border-color-on-hover;
+        }
+      }
+    }
+    
+    .retab__tabpanel {
+      padding: .5rem;
+      color: $text-color;
+      p{
+      margin:0px;
+      }
+      #schmerz{
+        font-size: 20px;
+        padding-bottom:10px;
+      }
+      #verdienen{
+        color:#ffff;
+        font-weight: 600;
+      }
+    }
+  }
+  
+  .tab-title {
+    font-weight: bold;
+  }
+  .tab-subtitle {
+    color: #67CCFF;
+  }
+  
+  .tabpanel-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+  .tabpanel-subtitle {
+    color: #67CCFF;
+    font-size: 1rem;
+  }
+  .tabpanel-text {
+      margin-top: 1rem;
+  }

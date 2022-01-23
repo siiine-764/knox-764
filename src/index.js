@@ -4,7 +4,7 @@ import './index.css';
 import './style.css';
 import './scss/style.scss';
 import App from './App';
-import './script';
+import './script.js';
 import reportWebVitals from './reportWebVitals';
 import { div } from 'prelude-ls';
 import pic from '../src/images/8e6d5f122883155.Y3JvcCwzMTcxLDI0ODEsMCww.jpg';
@@ -68,12 +68,200 @@ class Navbar extends React.Component {
         </nav>
       </div>
     </section>
+    
     )
   }
   }
 
 ReactDOM.render(<Navbar />,document.getElementById('navbar'));
 
+//Component the media and email
+
+const CONTENT_DEFINITION = [
+  {
+    uid: Math.floor(100000 + Math.random() * 900000),
+    tab: "Front end development",
+    panel: (
+      <>
+        <p id="verdienen">Front end development</p>
+        <p id="schmerz">Experienced with:</p>
+        <p>💪 | HTML/CSS/JavaScript</p>
+        <p>🔥  | jQuery/Ajax</p>
+        <p>💪 | CASS/SCSS</p>
+      </>
+    ),
+  },
+  {
+    uid: Math.floor(100000 + Math.random() * 900000),
+    tab: "Back end development",
+    panel: (
+      <>
+        <p id="verdienen">Back end development</p>
+        <p id="schmerz">Experienced with:</p>
+        <p>💪 | Node js</p>
+        <p>💪 | Laravel</p>
+      </>
+    ),
+  },
+  {
+    uid: Math.floor(100000 + Math.random() * 900000),
+    tab: "JavaScript frameworks libraries",
+    panel: (
+      <>
+        <p id="verdienen">JavaScript frameworks libraries</p>
+        <p id="schmerz">Experienced with:</p>
+        <p>💪 | React Js</p>
+        <p>🏈 | Styed-components</p>
+        <p>💪 | Bootstrap/Tailwind/Material-UI</p>
+        <p>💪 | Styed-components</p>
+        <p>💪 | Kite JS</p>
+      </>
+    ),
+  },
+  {
+    uid: Math.floor(100000 + Math.random() * 900000),
+    tab: "Graphic, UI/UX Design",
+    panel: (
+      <>
+        <p id="verdienen">Graphic, UI/UX Design</p>
+        <p id="schmerz">Experienced with:</p>
+        <p>💪 | Adobe Illustrator</p>
+        <p>🏈 | Photoshop</p>
+        <p>🏈 | Figma</p>
+      </>
+    ),
+  },
+  {
+    uid: Math.floor(100000 + Math.random() * 900000),
+    tab: "Version control",
+    panel: (
+      <>
+        <p id="verdienen">Version control</p>
+        <p id="schmerz">Familiar with:</p>
+        <p>💪 | Git</p>
+      </>
+    ),
+  },
+  {
+    uid: Math.floor(100000 + Math.random() * 900000),
+    tab: "Another",
+    panel: (
+      <>
+        <p id="verdienen">Another</p>
+        <p id="schmerz">Experienced with:</p>
+        <p>💪 | ASP.net</p>
+        <p>💪 | ADO.net</p>
+        <p>💪 | Android</p>
+
+
+      </>
+    ),
+  },
+  /*{
+    uid: Math.floor(100000 + Math.random() * 900000),
+    tab: (
+      <>
+        <p class="tab-title">A More Complete Tab</p>
+        <small class="tab-subtitle">With small details</small>
+      </>
+    ),
+    panel: (
+      <>
+        <p class="tabpanel-title">And if you decide to get creative</p>
+        <small class="tabpanel-subtitle">With some CSS</small>
+        <p class="tabpanel-text">You can style everything to your liking!</p>
+      </>
+    ),
+  },*/
+];
+
+
+function ReTab(props) {
+  const [selected, setSelected] = React.useState(props.selected || 0);
+  const tabs = [],
+        panels = [];
+
+  for (const tabItemDefinition of props.contentDefinition) {
+    const uid = tabItemDefinition.uid;
+    const tabHtmlId = `retab__tabslist__tab-${uid}`;
+    const panelHtmlId = `retab__tabpanel-${uid}`;
+
+    tabs.push({
+      uid: uid,
+      htmlId: tabHtmlId,
+      panelHtmlId: panelHtmlId,
+      content: tabItemDefinition.tab,
+    });
+
+    panels.push({
+      uid: uid,
+      htmlId: panelHtmlId,
+      tabHtmlId: tabHtmlId,
+      content: tabItemDefinition.panel,
+    });
+  }
+
+  return (
+    <div className="retab">
+      <Tabs ariaLabel={props.ariaLabel}
+            selected={selected}
+            onTabSelected={setSelected}
+            definition={tabs} />
+      {
+        selected <= tabs.length &&
+        <Panel key={panels[selected].uid}
+               controlledBy={panels[selected].tabHtmlId}>
+          {panels[selected].content}
+        </Panel>
+      }
+    </div>
+  );
+}
+function Tabs({ariaLabel, selected, onTabSelected, definition}) {
+  return (
+    <div role="tablist" aria-label={ariaLabel} className="retab__tablist">
+      {definition.map((tabDefinition, index) =>
+        <Tab key={tabDefinition.uid}
+             id={tabDefinition.htmlId}
+             controls={tabDefinition.panelHtmlId}
+             isSelected={index === selected}
+             onSelected={() => onTabSelected(index)}>
+          {tabDefinition.content}
+        </Tab>
+      )}
+    </div>
+  );
+}
+function Tab({htmlId, controls, isSelected, onSelected, children}) {
+  return (
+    <button id={htmlId} role="tab"
+            aria-seleted={isSelected}
+            aria-controls={controls}
+            onClick={onSelected}
+            className={`retab__tablist__tab ${isSelected ? 'selected' : ''}`}>
+      {children}
+    </button>
+  );
+}
+function Panel({htmlId, controlledBy, children}) {
+  return (
+    <div id={htmlId}
+         role="tabpanel"
+         aria-labelledby={controlledBy}
+         className="retab__tabpanel">
+      {children}
+    </div>
+  );
+}
+
+ReactDOM.render(
+  <ReTab
+    selected={0}
+    ariaLabel="Vertical Tabs"
+    contentDefinition={CONTENT_DEFINITION}
+  />,
+  document.getElementById('react-tabs-slot')
+);
 
 class Content extends React.Component {
   render() {
