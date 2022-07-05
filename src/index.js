@@ -117,6 +117,7 @@ class Project extends React.Component {
     }
     const tools = {
       marginTop: "-20px !important",
+      transform: "translate(0px, 20px)",
     }
     return (
     <section class="container section-2" style={componentproject}>

@@ -843,14 +843,19 @@ svg {
     }
   }
 
+  #btnresume{
+    padding:10px 0px !important;
 
+  }
+  #btnblog{
+    padding:10px 20px !important;
+  }
   #btnresume, #btnblog{
     border: 1px solid #e3573c;
     color: #e3573c !important ;
     border-radius: 5px;
     margin: 0px 10px;
     margin-top: 15px;
-    padding:10px 20px;
   }
   #btnresume:hover, #btnblog:hover{
     background-color: #e3583c42 !important;
