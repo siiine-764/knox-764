@@ -72,9 +72,9 @@ class AboutUS extends React.Component {
     <div class="col-sm-2"></div>
     <div class="col-sm-8">
       <div class="col-lg-8">
-        <p id="paragraph">Hello! My name is YASSINE AYACHE, a self-taught Designer & Front-end Developer. <br></br><br></br>
+        <p id="paragraph">Hello! My name is Mohamed YASSINE AYACHE, a self-taught Designer & full-stack Developer. <br></br><br></br>
         I enjoy creating things that live on the internet, whether that be websites, applications, or anything in between. My goal is to build products that provide pixel-perfect, performant experiences.<br></br>
-        I decided to drop out of school after getting my Associate degree here in Morocco. I've always been obsessed with computers and everything related to the web since I got my first computer. I started spending more and more time in front of that computer, from then till today.<br></br><br></br>
+        I decided to drop out of school after getting my Associate degree here in Morocco. I've always been obsessed with computers and everything related to the web since I got my first computer. I started spending more and more time in front and back of that computer, from then till today.<br></br><br></br>
         I mainly love to work with these technologies:
         </p>
         <div id="teufel">
@@ -84,7 +84,7 @@ class AboutUS extends React.Component {
                 <b>🂣</b> Laravel</p>     
               </div>   
               <div class="holle"><p>
-                <b>🂤</b> Styled-components <br></br>
+                <b>🂤</b> J2EE <br></br>
                 <b>🂥</b> .Net <br></br>
                 <b>🂦</b> Webpack </p></div>
          </div>
@@ -120,7 +120,7 @@ class Project extends React.Component {
     }
     const tools = {
       marginTop: "-20px !important",
-      transform: "translate(0px, 20px)",
+      transform: "translate(0px, -20px)",
     }
     return (
     <section class="container section-2" style={componentproject}>
