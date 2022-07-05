@@ -93,7 +93,12 @@ margin-top: -40px;
 }
 */
 #img_logo{
-    position: relative !important;width: 5%;
+    position: relative !important;
+    min-width: 5%;
+    justify-content:center;
+    align-items:center;
+    margin-top:5px;
+
 }
 
 $optionDefaultColours: #ED5565,#FC6E51,#FFCE54,#2ECC71,#5D9CEC,#AC92EC;
@@ -105,7 +110,7 @@ body {
    
    font-family: 'Roboto', sans-serif;
    transition:.25s;
-   background-color: #262626;
+   background-color: #2b2a2a !important;
 
    .credit {
       position: absolute;
@@ -322,14 +327,14 @@ $bar-spacing: 18px;
 $content-width: 1000px;
 $breakpoint: 799px;
 $nav-height: 70px;
-$nav-background: #262626;
+$nav-background: #2b2a2a;
 $nav-font-color: #ffffff;
 $link-hover-color: #2581DC;
 
 // Outer navigation wrapper
 .navigation {
   height: $nav-height;
-  background: $nav-background;
+  background: $nav-background !important;
 }
 
 // Logo and branding
@@ -351,6 +356,7 @@ $link-hover-color: #2581DC;
 .nav-container {
   max-width: $content-width;
   margin: 0 auto;
+  
 }
 
 // Navigation 
@@ -368,7 +374,7 @@ nav {
         display: block;
         padding: 0 20px;
         line-height: $nav-height;
-        background: $nav-background;
+        background: $nav-background !important;
         color: $nav-font-color;
         text-decoration: none;
         &:hover {
@@ -407,24 +413,19 @@ nav {
   position: absolute;
   top: 0;
   right: 0;
-  background: $nav-background;
+  background: $nav-background !important;
   height: $nav-height;
   width: $nav-height;
 }
 
-#btn{
-   border: 1px solid #e3573c !important;
-   color: #e3573c !important ;
-   border-radius: 5px;
-   margin-top: 10px;
-   margin-bottom: -10px;
- }
+
  #btn:hover {
    background-color: #e3583c42 !important;
  }
 .link{
    color: #ccd6f6 !important;
    text-decoration: none !important;
+   
 }
 b{
    color: #e3573c !important;
@@ -636,7 +637,7 @@ i {
     system-ui, sans-serif;
 }
 #paragraph,p {
-  font-size: 20px;
+  font-size: 15px;
   color: #8892b0;
   font-family: Calibre, "San Francisco", "SF Pro Text", -apple-system,
     system-ui, sans-serif;
@@ -695,7 +696,10 @@ svg {
         color: $text-color;
         cursor: pointer;
         text-align: left;
-
+        border-left:none;
+        border-top:none;
+        border-bottom:none;
+        background:transparent ;
         border-right: .15em solid $border-color;
         &:hover, &.selected  {
           border-right-color: $border-color-on-hover;
@@ -737,4 +741,137 @@ svg {
   }
   .tabpanel-text {
       margin-top: 1rem;
+  }
+
+  #titreAbout, #titreexperiens{
+    font-size: 25px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+
+  }
+    #titreAbout::after, #titreexperiens::after {
+  content: "";
+  display: block;
+  position: relative;
+  top: 15px;
+  width: 50%;
+  height: 1px;
+  margin-left: 20px;
+  background-color: #8892b0;
+  }
+
+  #componentContact{
+    padding:150px 100px;
+    #stylebuttoncontact{
+      transition:.5s;         
+    }
+    #step4{
+      font-size: 15px;
+      margin-bottom: 0px;
+    }
+  #stylebuttoncontact:hover{
+    background-color:#e3583c42;
+    text-decoration: none;
+  }
+    #description{
+      font-size: 18px;
+    }
+  }
+  @media (max-width: 768px) {
+    #componentContact{
+      padding: 0px;
+    }
+  }
+
+  .moglichkeit{
+    padding:100px;
+  
+
+  .otherpro{
+    background-color: #212121 ;
+    border-radius: 5px;
+    padding:25px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.486);
+
+
+    transition-delay: 0ms;
+     visibility: visible; 
+     opacity: 1; 
+     transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); 
+     transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1) 0s, 
+     opacity 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s, 
+     transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+    i{
+      font-size:50px;
+      padding-bottom: 25px;
+    }
+    .pro_title{
+      font-size: 20px;
+      color:#ccd6f6;
+    }
+    .pro_description{
+      color:#a8b2d1;
+      font-size: 15px;
+
+    }
+    footer{
+      margin-bottom: 15px;
+      .pro_tech_list{
+      font-size: 13px !important;
+        color:#8892b0;
+        display: flex;
+        align-items: flex-end;
+        -webkit-box-flex: 1;
+        flex-grow: 1;
+        flex-wrap: wrap;
+        padding: 0px;
+        margin: 20px 0px 0px;
+        list-style: none;
+        li{
+          padding-right:20px;
+          display: list-item;
+    text-align: -webkit-match-parent;
+        }
+      }
+    }
+  }
+}
+  @media (max-width: 768px) {
+    .moglichkeit{
+      padding: 30px;
+    }
+  }
+
+
+  #btnresume, #btnblog{
+    border: 1px solid #e3573c;
+    color: #e3573c !important ;
+    border-radius: 5px;
+    margin: 0px 10px;
+    margin-top: 15px;
+    padding:10px 20px;
+  }
+  #btnresume:hover, #btnblog:hover{
+    background-color: #e3583c42 !important;
+  }
+  @media screen and (max-width: 576px){
+    #btnresume, #btnblog{
+    margin: 10px 0px;
+    width: 100%;
+    }
+    #img_logo{
+      min-width: 12%;
+    }
+    #siderheader{
+    padding: 10px 30px;
+    margin: 0px;
+    width: 100%;
+    }
+  }
+  @media screen and (max-width: 788px){
+    #btnresume, #btnblog{
+    margin: 10px 0px;
+    width: 100%;
+    }
   }

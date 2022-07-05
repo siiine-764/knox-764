@@ -1,13 +1,13 @@
 import './scss/style.css';
 import React, { Component } from 'react';
-import logo from './images/Y-764.png'
+
 
 class App extends Component{
-  render(){
+    render(){
     return(
       <div className="App">
-      </div>
-    )
+    </div>
+    );
   }
 }
 export default App;

@@ -7,8 +7,11 @@ import App from './App';
 import './script.js';
 import reportWebVitals from './reportWebVitals';
 import { div } from 'prelude-ls';
-import pic from '../src/images/8e6d5f122883155.Y3JvcCwzMTcxLDI0ODEsMCww.jpg';
+import pic from '../src/images/Opera Snapshot_2022-07-02_210830_index3.html.png';
+import pic1 from '../src/images/Opera Snapshot_2022-07-05_020304_index.html.png'
+import me from '../src/images/me.jpeg';
 import logo from './images/Y-764.png';
+import 'semantic-ui-css/semantic.min.css';
 
 
 ReactDOM.render(
@@ -17,6 +20,7 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById('root')
 );
+
 
 //React Components
 class Navbar extends React.Component {
@@ -32,38 +36,21 @@ class Navbar extends React.Component {
           <div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
           <ul class="nav-list">
             <li>
-              <a class="link" href="#about"><b>01.</b> About</a>
+              <a class="link" href="#titreAbout"><b>01.</b> About</a>
             </li>
             <li>
-              <a class="link" href="#experience"><b>02.</b> Experience</a>
+              <a class="link" href="#titreexperiens"><b>02.</b> Experience</a>
             </li>
             <li>
               <a class="link" href="#work"><b>03.</b> Work</a>
             </li>
             <li>
-              <a class="link" href="#contact"><b>04.</b> Contact</a>
+              <a class="link" href="#componentContact"><b>04.</b> Contact</a>
             </li>
             <li>
-              <a href="#!" class="link">Services</a>
-              <ul class="nav-dropdown">
-                <div class="langWrap">
-                <li>
-                  <a href="#lang1" id="lang" language='kazakh'>ҚАЗ</a>
-                </li>
-                <li>
-                  <a href="#lang2" id="lang" language='japanese'>あ</a>
-                </li>
-                <li>
-                  <a href="#lang3" id="lang" language='deutsch'>Deutsch</a>
-                </li>
-                <li>
-                  <a href="#lang4" id="lang" language='english' class="active">EN</a>
-                </li>
-                </div>
-              </ul>
             </li>
-            <li><a class="link" id="btn" href="#resume">Resume</a></li>
-            <li><a class="link" id="btn" href="#blog">Blog</a></li>
+            <li><button class="link" id="btnresume" href="#resume">Resume</button></li>
+            <li><button class="link" id="btnblog" href="#blog">Blog</button></li>
           </ul>
         </nav>
       </div>
@@ -75,106 +62,188 @@ class Navbar extends React.Component {
 
 ReactDOM.render(<Navbar />,document.getElementById('navbar'));
 
-//Component the media and email
+class AboutUS extends React.Component {
+  render() {
+    return (
+      <div class="container-fluid"  id="compenent1">
+  <div class="row">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-8">
+      <div class="col-lg-8">
+        <p id="paragraph">Hello! My name is YASSINE AYACHE, a self-taught Designer & Front-end Developer. <br></br><br></br>
+        I enjoy creating things that live on the internet, whether that be websites, applications, or anything in between. My goal is to build products that provide pixel-perfect, performant experiences.<br></br>
+        I decided to drop out of school after getting my Associate degree here in Morocco. I've always been obsessed with computers and everything related to the web since I got my first computer. I started spending more and more time in front of that computer, from then till today.<br></br><br></br>
+        I mainly love to work with these technologies:
+        </p>
+        <div id="teufel">
+              <div class="holle" id="entscheidest">
+                <p><b>🂡</b> React <br></br>
+                <b>🂢</b> Anguler <br></br>
+                <b>🂣</b> Gatsby</p>     
+              </div>   
+              <div class="holle"><p>
+                <b>🂤</b> Styled-components <br></br>
+                <b>🂥</b> SASS <br></br>
+                <b>🂦</b> - </p></div>
+         </div>
+        </div>
+      <div class="col-lg-4 staatsburgerschaft">
+        <div id="border">  </div>
+              <div class="praktikum">
+                <img src={me}  alt="Avatar" class="image"></img>
+                <div class="overlay">
+                </div>
+              </div>
+      </div>
 
+    </div>
+    <div class="col-sm-2"></div>
+  </div>
+</div>
+    )
+  }
+  }
+
+ReactDOM.render(<AboutUS />,document.getElementById('aboutus'));
+
+
+class Project extends React.Component {
+  render() {
+    const componentproject = {
+      GeolocationPosition : "center",
+    }
+    const smalltittel = {
+      marginBottom : "-50px",
+      fontSize : "12px",
+    }
+    const tools = {
+      marginTop: "-20px",
+    }
+    return (
+    <section class="container section-2" style={componentproject}>
+    <div class="row">
+      <div class="col-sm-10 offer offer-1">
+        <img src={pic} alt="a computer in dark with with white shadow" class="col-sm-6 offer-img offer-1-img">
+       </img>
+        <div class="col-sm-6 offer-description offer-desc-1">
+          <p style={smalltittel}>Featured Project</p>
+          <h1 class="offer-title">Netflix</h1>
+          <p class="offer-hook">A platform that allows teachers to create courses and sell them.
+        It gives great teacher-student reach through live streams,
+        podcasts and direct messages.</p>
+        <p style={tools} id="tools">SCSS   Bootstrap   javascript    HTML</p>
+        </div>
+      </div>
+
+            <div class="col-sm-10 offer offer-1">
+        <img src={pic1} alt="a computer in dark with with white shadow" class="col-sm-6 offer-img offer-1-img">
+       </img>
+        <div class="col-sm-6 offer-description offer-desc-1">
+          <p style={smalltittel}>Featured Project</p>
+          <h1 class="offer-title">Portfolio</h1>
+          <p class="offer-hook">A Page web for Ehya cann you show service this  company also 
+          Advantages of dealing with them.</p>
+        <p style={tools} id="tools">SCSS   Bootstrap   Javascript    Webpack</p>
+        </div>
+      </div>
+      </div>
+    </section>
+    )
+  }
+  }
+
+ReactDOM.render(<Project />,document.getElementById('project'));
+
+
+
+//Component the media and email
 const CONTENT_DEFINITION = [
   {
     uid: Math.floor(100000 + Math.random() * 900000),
     tab: "Front end development",
     panel: (
-      <>
+      <div>
         <p id="verdienen">Front end development</p>
         <p id="schmerz">Experienced with:</p>
-        <p>💪 | HTML/CSS/JavaScript</p>
-        <p>🔥  | jQuery/Ajax</p>
-        <p>💪 | CASS/SCSS</p>
-      </>
+        <p>&#127757; | HTML/CSS/JavaScript</p>
+        <p>&#10024; | Reactjs</p>
+        <p>&#11088; | Anguler</p>
+        <p>&#127761; | Nextjs</p>
+      </div>
     ),
   },
   {
     uid: Math.floor(100000 + Math.random() * 900000),
     tab: "Back end development",
     panel: (
-      <>
+      <div>
         <p id="verdienen">Back end development</p>
         <p id="schmerz">Experienced with:</p>
-        <p>💪 | Node js</p>
-        <p>💪 | Laravel</p>
-      </>
+        <p>&#127770; | Nodejs</p>
+        <p>&#127801; | Laravel</p>
+        <p>&#127776; | C/C#</p>
+        <p>&#127774; | Java</p>
+
+      </div>
     ),
   },
   {
     uid: Math.floor(100000 + Math.random() * 900000),
     tab: "JavaScript frameworks libraries",
     panel: (
-      <>
+      <div>
         <p id="verdienen">JavaScript frameworks libraries</p>
         <p id="schmerz">Experienced with:</p>
-        <p>💪 | React Js</p>
-        <p>🏈 | Styed-components</p>
+        <p>&#10024; | React Js</p>
+        <p>&#127815; | Styed-components</p>
         <p>💪 | Bootstrap/Tailwind/Material-UI</p>
-        <p>💪 | Styed-components</p>
         <p>💪 | Kite JS</p>
-      </>
+      </div>
     ),
   },
   {
     uid: Math.floor(100000 + Math.random() * 900000),
     tab: "Graphic, UI/UX Design",
     panel: (
-      <>
+      <div>
         <p id="verdienen">Graphic, UI/UX Design</p>
         <p id="schmerz">Experienced with:</p>
-        <p>💪 | Adobe Illustrator</p>
-        <p>🏈 | Photoshop</p>
-        <p>🏈 | Figma</p>
-      </>
+        <p>&#127913; | Adobe Illustrator</p>
+        <p>&#127882; | Photoshop</p>
+        <p>&#10024; | Figma</p>
+        <p>&#127914; | Adobe XD</p>
+      </div>
     ),
   },
   {
     uid: Math.floor(100000 + Math.random() * 900000),
     tab: "Version control",
     panel: (
-      <>
+      <div>
         <p id="verdienen">Version control</p>
         <p id="schmerz">Familiar with:</p>
-        <p>💪 | Git</p>
-      </>
+        <p>&#9875; | Git/Github</p>
+        <p>&#9935; | Shell</p>
+
+      </div>
     ),
   },
   {
     uid: Math.floor(100000 + Math.random() * 900000),
     tab: "Another",
     panel: (
-      <>
+      <div>
         <p id="verdienen">Another</p>
         <p id="schmerz">Experienced with:</p>
-        <p>💪 | ASP.net</p>
-        <p>💪 | ADO.net</p>
-        <p>💪 | Android</p>
-
-
-      </>
+        <p>&#127918; | ASP.net</p>
+        <p>&#127919; | Webpack</p>
+        <p>&#9989; | ADO.net</p>
+        <p>&#9939; | Android</p>
+        <p>&#9935; | Wordpress</p>
+      </div>
     ),
   },
-  /*{
-    uid: Math.floor(100000 + Math.random() * 900000),
-    tab: (
-      <>
-        <p class="tab-title">A More Complete Tab</p>
-        <small class="tab-subtitle">With small details</small>
-      </>
-    ),
-    panel: (
-      <>
-        <p class="tabpanel-title">And if you decide to get creative</p>
-        <small class="tabpanel-subtitle">With some CSS</small>
-        <p class="tabpanel-text">You can style everything to your liking!</p>
-      </>
-    ),
-  },*/
 ];
-
 
 function ReTab(props) {
   const [selected, setSelected] = React.useState(props.selected || 0);
@@ -235,7 +304,6 @@ function Tabs({ariaLabel, selected, onTabSelected, definition}) {
 function Tab({htmlId, controls, isSelected, onSelected, children}) {
   return (
     <button id={htmlId} role="tab"
-            aria-seleted={isSelected}
             aria-controls={controls}
             onClick={onSelected}
             className={`retab__tablist__tab ${isSelected ? 'selected' : ''}`}>
@@ -262,138 +330,134 @@ ReactDOM.render(
   />,
   document.getElementById('react-tabs-slot')
 );
+class AnotherPro extends React.Component {
 
-class Content extends React.Component {
   render() {
-    return (
-      <div class="content">
-      <h2 class="title">Hello World</h2>
-      <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi veritatis, dicta nesciunt repellat eius labore ea accusantium? Ex nemo vel dolorem cum neque. Corrupti laudantium repellendus maxime reiciendis, voluptate modi optio sed qui eaque rerum fugiat accusantium, quis sequi eum. Quisquam reiciendis earum voluptatibus, provident ex error debitis dolorem pariatur explicabo quae deserunt aut non sequi facere! Velit sunt incidunt accusantium saepe hic debitis totam, laudantium ab culpa optio dolores nam quo fugiat neque nostrum enim officia quam labore obcaecati?</p>
-    <p class="text">sterben komisch kapput umgangssprachlich niederlassungserlaubnis heimlich bilden rechnen ich ahne aufschieben</p>
+    const styletitre = {
+      fontWeight:"700",
+      textAlign: "center",
+      backgroundColor:"red !important",
+      marginBottom:"70px",
+    }
+    return ( 
+<div class="container mt-3">
+  <div class="row moglichkeit" id="work">
+
+  <h2 style={styletitre}>Other Noteworthy Projects</h2>
+
+    <div class="col-sm-4 col-xl-4 p-3">
+      <div class="project-inner otherpro">
+        <header>
+        <div class="project-top">
+          <div class="folder">
+          <i class="far fa-folder"></i>
+              </div><div class="project-links"></div>
+              </div><h3 class="project-title pro_title">Nice resume: Resume builder</h3>
+              <div class="project-description"><p class="pro_description">I got the chance to contribute to this tool which is amazing tool that makes building a resume very simple and easy.</p>
+              </div>
+              </header>
+              <footer>
+                <ul class="project-tech-list pro_tech_list">
+                  <li>Gatsby</li>
+                  <li>Formik</li>
+                  <li>Tailwindcss</li>
+                  <li>in18next</li>
+                  <li>Firebase</li>
+                  <li>nanoevents</li>
+                  </ul>
+                  </footer>
+                  </div>
+                </div>
+    <div class="col-sm-4 col-xl-4 p-3">
+    <div class="project-inner otherpro">
+        <header>
+        <div class="project-top">
+          <div class="folder">
+          <i class="far fa-folder"></i>
+              </div><div class="project-links"></div>
+              </div><h3 class="project-title pro_title">Nice resume: Resume builder</h3>
+              <div class="project-description"><p class="pro_description">I got the chance to contribute to this tool which is amazing tool that makes building a resume very simple and easy.</p>
+              </div>
+              </header>
+              <footer>
+                <ul class="project-tech-list pro_tech_list">
+                  <li>Gatsby</li>
+                  <li>Formik</li>
+                  <li>Tailwindcss</li>
+                  <li>in18next</li>
+                  <li>Firebase</li>
+                  <li>nanoevents</li>
+                  </ul>
+                  </footer>
+                  </div>
     </div>
-    )
-  }
-  }
-
-ReactDOM.render(<Content />,document.getElementById('content'));
-
-
-//React Render HTML
-/*const myelement = (
-  <table>
-    <tr>
-      <th>FirstName : </th>
-      <th>yassine</th>
-    </tr>
-    <tr>
-      <th>LastName : </th>
-      <th>Ayache</th>
-    </tr>
-  </table>
-)
-*/
-//React JSX
-/*const myelement1 = <h1 class="h1">YOOOOOW FUCKING BOY</h1>
-ReactDOM.render(myelement1,document.getElementById('root2'));*/
-
-/*function start() {
-  return(
-    <div>
-    Start the FUCKING here
-    </div>
-  );
-  
-}
-ReactDOM.render(start,document.getElementById('root1'));
-ReactDOM.render(myelement,document.getElementById('root1'));*/
-
-
-//React Components
-class Loader extends React.Component {
-  render() {
-    return (<div>
-
-    <div class="wave">
-    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-        <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
-    </svg>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-6">
-          <h1 id="h1">Data to enrich your online business</h1>
-          <h1 id="p2">sweet girl</h1>
-          <h1 id="p1">
-          Anim aute id magna aliqua ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.</h1>
-        </div>
-        <div class="col-sm-6">
-          <div id="wapper2"></div>
-        <img src={pic} alt="pic" id="img"></img>
-        <div id="wapper1"></div>
-        </div>
-      </div>
+    <div class="col-sm-4 col-xl-4 p-3">
+    <div class="project-inner otherpro">
+        <header>
+        <div class="project-top">
+          <div class="folder">
+          <i class="far fa-folder"></i>
+              </div><div class="project-links"></div>
+              </div><h3 class="project-title pro_title">Nice resume: Resume builder</h3>
+              <div class="project-description"><p class="pro_description">I got the chance to contribute to this tool which is amazing tool that makes building a resume very simple and easy.</p>
+              </div>
+              </header>
+              <footer>
+                <ul class="project-tech-list pro_tech_list">
+                  <li>Gatsby</li>
+                  <li>Formik</li>
+                  <li>Tailwindcss</li>
+                  <li>in18next</li>
+                  <li>Firebase</li>
+                  <li>nanoevents</li>
+                  </ul>
+                  </footer>
+                  </div>
     </div>
 
+  </div>
 </div>
-
-    
-
-    </div>
     )
   }
   }
-ReactDOM.render(<Loader />,document.getElementById('loader'));
+ReactDOM.render(<AnotherPro />,document.getElementById('anotherpro'));
 
 
 
-/*class Car extends React.Component{
-  constructor(props){
-    super(props);
-    this.state = {
-      brand : "Ford",
-      model : "Mustrang",
-      color : "red",
-      year : 2020
-    };
-  }
-  changercolor = () =>{
-    this.setState({color: "blue"});
-  }
-  render(){
-    return(
-      <div>
-      <h1>My {this.state.brand}</h1>
-      <p>It's a {this.state.color} {this.state.model} 
-      from {this.state.year}.
-      </p>
-      <button type="button" onClick={this.changercolor}>
-      changer color</button>
-      </div>
-    );
-  }
-}
-ReactDOM.render(<Car/>, document.getElementById('root'));*/
 
-
-class MyHeader extends React.Component{
-  render(){
+class Contact extends React.Component {
+  render() {
     const mystyle = {
-      color : "red",
-      fontSize : "25px",
-      backgroundColor : "black",
-      padding : "20px"
+      marginBottom:"50px",
+    textAlign:"center",
+    backgroundColor:"red",
+    padding: "70px 10px",
     };
-    return(
-      <div>
-      <p class="p">The Caterpillar and Alice looked at each other for some time in silence:
-      at last the Caterpillar took the hookah out of its mouth, and addressed
-      her in a languid, sleepy voice.</p>
-      <h1 style={mystyle}>Hello Styled!</h1>
-      </div>
-    );
+    const titreContact = {
+      fontSize: "60px",     
+      fontWeight: "bold",
+    };
+    const stylebutton = {
+      fontSize:"18px",
+      border:"2px solid #e3573c",
+      color:"#e3573c",
+      borderRadius:"5px",
+      padding:"20px 30px"
+    };
+    return (
+    <section  class="container-fluid" id="componentContact"  style={mystyle}> 
+    <p id="step4"><b>04.</b> What's Next</p>
+    <h2 style={titreContact}>Get IN Touch</h2>
+    <p id="description">I'm always looking for the best opportunities and challenges.
+    I will try my best <br></br>
+    to get back to you as soon as possible!</p>
+    <a href="#1" id="stylebuttoncontact" style={stylebutton}>Say hello</a>
+    </section>
+    )
   }
-}
+  }
+ReactDOM.render(<Contact />,document.getElementById('contact'));
 
-ReactDOM.render(<MyHeader />, document.getElementById('rootheader'))
 
 reportWebVitals();
 

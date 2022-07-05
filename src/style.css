@@ -132,3 +132,84 @@
 
 
 @import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+
+
+#description{
+    padding-bottom: 20px;
+}
+
+
+
+/* ================= VARIABLE ================ */
+:root {
+    --primary-color: hsl(9, 94%, 61%);
+    --primary-color-alt: hsl(28, 72%, 83%);
+    --second-color: #3e537c;
+    --second-color-alt: hsla(220, 33%, 36%, 65%);
+    --third-color: hsl(220, 36%, 28%);
+    --white-color: #fbfbfb;
+    --white-color-alt: hsl(12, 14%, 93%);
+    --dark-color: hsl(300, 100%, 0%);
+  }
+/* -------- OFFER SECTION ------------- */
+.section-2 {
+    margin: 0 auto;
+    justify-content: center;
+  }
+  .offer {
+    margin: 0 auto;
+    justify-content: center;
+    margin-top: 90px;
+  }
+  .offer img {
+    border-radius: 10px !important;
+  }
+  .offer-1 img {
+    background-color: var(--dark-color);
+  }
+  .offer-2 img {
+    background-color: var(--dark-color);
+  }
+  .offer-description {
+    padding: 2rem 1rem;
+    border-radius: 10px;
+  }
+  .offer-description .offer-title {
+    color: var(--second-color);
+    font-size: 3rem;
+    font-weight: 500;
+    padding: 1.5rem 0 0.5rem 0;
+  }
+  .offer-description .offer-hook {
+    background-color: black;
+    transform: translate(-40px, -20px);
+    font-size: 1.2rem;
+    padding: 20px 50px;
+    border-radius: 10px;
+  }
+  .offer-description .cart-btn {
+    cursor: pointer;
+    color: var(--second-color-alt);
+    font-size: 1.1rem;
+    display: grid;
+    place-items: center;
+    margin: 2rem 0 1rem 0;
+    width: 10rem;
+    height: 3rem;
+    background-image: linear-gradient(
+      to top,
+      var(--primary-color-alt),
+      var(--primary-color)
+    );
+  }
+  .offer-description #tools {
+    word-spacing: 8px;
+  }
+  .offer-description .cart-btn:hover {
+    background-image: linear-gradient(
+      to bottom,
+      var(--primary-color-alt),
+      var(--primary-color)
+    );
+  }
+  
