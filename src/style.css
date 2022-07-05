@@ -175,7 +175,7 @@
     border-radius: 10px;
   }
   .offer-description .offer-title {
-    color: var(--second-color);
+    color: #e3573c !important;
     font-size: 3rem;
     font-weight: 500;
     padding: 1.5rem 0 0.5rem 0;
@@ -213,3 +213,6 @@
     );
   }
   
+#teufel{
+  padding-bottom: 40px;
+}

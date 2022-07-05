@@ -21,7 +21,6 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-
 //React Components
 class Navbar extends React.Component {
   render() {
@@ -49,8 +48,8 @@ class Navbar extends React.Component {
             </li>
             <li>
             </li>
-            <li><button class="link" id="btnresume" href="#resume">Resume</button></li>
-            <li><button class="link" id="btnblog" href="#blog">Blog</button></li>
+            <li> <a href="https://drive.google.com/file/d/1QIdPkUV0iBiBp2tvUX-hdUR1-sFbKkLk/view?usp=sharing" class="link" id="btnresume" download>Resume</a></li>
+            <li><button class="link" id="btnblog"  href="#blog">Blog</button></li>
           </ul>
         </nav>
       </div>
@@ -79,12 +78,12 @@ class AboutUS extends React.Component {
               <div class="holle" id="entscheidest">
                 <p><b>🂡</b> React <br></br>
                 <b>🂢</b> Anguler <br></br>
-                <b>🂣</b> Gatsby</p>     
+                <b>🂣</b> Laravel</p>     
               </div>   
               <div class="holle"><p>
                 <b>🂤</b> Styled-components <br></br>
-                <b>🂥</b> SASS <br></br>
-                <b>🂦</b> - </p></div>
+                <b>🂥</b> .Net <br></br>
+                <b>🂦</b> Webpack </p></div>
          </div>
         </div>
       <div class="col-lg-4 staatsburgerschaft">
@@ -117,7 +116,7 @@ class Project extends React.Component {
       fontSize : "12px",
     }
     const tools = {
-      marginTop: "-20px",
+      marginTop: "-20px !important",
     }
     return (
     <section class="container section-2" style={componentproject}>
@@ -128,9 +127,7 @@ class Project extends React.Component {
         <div class="col-sm-6 offer-description offer-desc-1">
           <p style={smalltittel}>Featured Project</p>
           <h1 class="offer-title">Netflix</h1>
-          <p class="offer-hook">A platform that allows teachers to create courses and sell them.
-        It gives great teacher-student reach through live streams,
-        podcasts and direct messages.</p>
+          <p class="offer-hook">A platform that allows watched a movies & series</p>
         <p style={tools} id="tools">SCSS   Bootstrap   javascript    HTML</p>
         </div>
       </div>
@@ -352,18 +349,15 @@ class AnotherPro extends React.Component {
           <div class="folder">
           <i class="far fa-folder"></i>
               </div><div class="project-links"></div>
-              </div><h3 class="project-title pro_title">Nice resume: Resume builder</h3>
+              </div><h3 class="project-title pro_title">Nice resume: ITTweb</h3>
               <div class="project-description"><p class="pro_description">I got the chance to contribute to this tool which is amazing tool that makes building a resume very simple and easy.</p>
               </div>
               </header>
               <footer>
                 <ul class="project-tech-list pro_tech_list">
-                  <li>Gatsby</li>
-                  <li>Formik</li>
+                  <li>JavaScript</li>
+                  <li>CSS</li>
                   <li>Tailwindcss</li>
-                  <li>in18next</li>
-                  <li>Firebase</li>
-                  <li>nanoevents</li>
                   </ul>
                   </footer>
                   </div>
