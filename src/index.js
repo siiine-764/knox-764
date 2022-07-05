@@ -48,7 +48,7 @@ class Navbar extends React.Component {
             </li>
             <li>
             </li>
-            <li> <a href="https://drive.google.com/file/d/1QIdPkUV0iBiBp2tvUX-hdUR1-sFbKkLk/view?usp=sharing" class="link" id="btnresume" download>Resume</a></li>
+            <li> <button href="https://drive.google.com/file/d/1QIdPkUV0iBiBp2tvUX-hdUR1-sFbKkLk/view?usp=sharing" class="link" id="btnresume" download>Resume</button></li>
             <li><button class="link" id="btnblog"  href="#blog">Blog</button></li>
           </ul>
         </nav>
