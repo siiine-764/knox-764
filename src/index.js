@@ -131,7 +131,10 @@ class Project extends React.Component {
         <div class="col-sm-6 offer-description offer-desc-1">
           <p style={smalltittel}>Featured Project</p>
           <h1 class="offer-title">Netflix</h1>
-          <p class="offer-hook">A platform that allows watched a movies & series</p>
+          <p class="offer-hook">
+          I make this Platform to watched Movies and Series, 
+          this tool which is amazing tool that makes building a resume very simple and easy.
+          </p>
         <p style={tools} id="tools">SCSS   Bootstrap   javascript    HTML</p>
         </div>
       </div>
@@ -142,8 +145,8 @@ class Project extends React.Component {
         <div class="col-sm-6 offer-description offer-desc-1">
           <p style={smalltittel}>Featured Project</p>
           <h1 class="offer-title">Portfolio</h1>
-          <p class="offer-hook">A Page web for Ehya cann you show service this  company also 
-          Advantages of dealing with them.</p>
+          <p class="offer-hook">I make this Page web for Ehya startup can you show service this  company also 
+          Advantages of dealing with them, and this tool is amazing tool that make building a resume very simple and easy.</p>
         <p style={tools} id="tools">SCSS   Bootstrap   Javascript    Webpack</p>
         </div>
       </div>
@@ -353,7 +356,7 @@ class AnotherPro extends React.Component {
           <div class="folder">
           <i class="far fa-folder"></i>
               </div><div class="project-links"></div>
-              </div><h3 class="project-title pro_title">Nice resume: ITTweb</h3>
+              </div><h3 class="project-title pro_title">Nice resume:  <a href="https://ittweb.netlify.app/">ITTweb </a></h3>
               <div class="project-description"><p class="pro_description">I got the chance to contribute to this tool which is amazing tool that makes building a resume very simple and easy.</p>
               </div>
               </header>
@@ -361,30 +364,7 @@ class AnotherPro extends React.Component {
                 <ul class="project-tech-list pro_tech_list">
                   <li>JavaScript</li>
                   <li>CSS</li>
-                  <li>Tailwindcss</li>
-                  </ul>
-                  </footer>
-                  </div>
-                </div>
-    <div class="col-sm-4 col-xl-4 p-3">
-    <div class="project-inner otherpro">
-        <header>
-        <div class="project-top">
-          <div class="folder">
-          <i class="far fa-folder"></i>
-              </div><div class="project-links"></div>
-              </div><h3 class="project-title pro_title">Nice resume: Resume builder</h3>
-              <div class="project-description"><p class="pro_description">I got the chance to contribute to this tool which is amazing tool that makes building a resume very simple and easy.</p>
-              </div>
-              </header>
-              <footer>
-                <ul class="project-tech-list pro_tech_list">
-                  <li>Gatsby</li>
-                  <li>Formik</li>
-                  <li>Tailwindcss</li>
-                  <li>in18next</li>
-                  <li>Firebase</li>
-                  <li>nanoevents</li>
+                  <li>Bootstrap</li>
                   </ul>
                   </footer>
                   </div>
@@ -396,18 +376,41 @@ class AnotherPro extends React.Component {
           <div class="folder">
           <i class="far fa-folder"></i>
               </div><div class="project-links"></div>
-              </div><h3 class="project-title pro_title">Nice resume: Resume builder</h3>
+              </div><h3 class="project-title pro_title">Project managment Cars</h3>
               <div class="project-description"><p class="pro_description">I got the chance to contribute to this tool which is amazing tool that makes building a resume very simple and easy.</p>
               </div>
               </header>
               <footer>
                 <ul class="project-tech-list pro_tech_list">
-                  <li>Gatsby</li>
-                  <li>Formik</li>
+                  <li>Laravel 8</li>
+                  <li>SCSS/css</li>
                   <li>Tailwindcss</li>
-                  <li>in18next</li>
-                  <li>Firebase</li>
-                  <li>nanoevents</li>
+                  <li>Bootstrap</li>
+                  <li>mySQL</li>
+                  <li>Apache</li>
+                  </ul>
+                  </footer>
+                  </div>
+    </div>
+    <div class="col-sm-4 col-xl-4 p-3">
+    <div class="project-inner otherpro">
+        <header>
+        <div class="project-top">
+          <div class="folder">
+          <i class="far fa-folder"></i>
+              </div><div class="project-links"></div>
+              </div><h3 class="project-title pro_title">Nice resume: Website ecommerce</h3>
+              <a href="https://sholegoo.com/">sholegoo.com</a>
+              <a href="https://ajoun.ma/">ajoun.ma</a>
+              <div class="project-description"><p class="pro_description">I got the chance to contribute to this tool which is amazing tool that makes building a resume very simple and easy.</p>
+              </div>
+              </header>
+              <footer>
+                <ul class="project-tech-list pro_tech_list">
+                  <li>Wordpress</li>
+                  <li>Yoast SEO</li>
+                  <li>pagespeed.web.dev</li>
+                  <li>Woo</li>
                   </ul>
                   </footer>
                   </div>
@@ -419,8 +422,6 @@ class AnotherPro extends React.Component {
   }
   }
 ReactDOM.render(<AnotherPro />,document.getElementById('anotherpro'));
-
-
 
 
 class Contact extends React.Component {
