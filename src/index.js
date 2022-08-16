@@ -401,6 +401,7 @@ class AnotherPro extends React.Component {
               </div><div class="project-links"></div>
               </div><h3 class="project-title pro_title">Nice resume: Website ecommerce</h3>
               <a href="https://sholegoo.com/">sholegoo.com</a>
+              <br></br>
               <a href="https://ajoun.ma/">ajoun.ma</a>
               <div class="project-description"><p class="pro_description">I got the chance to contribute to this tool which is amazing tool that makes building a resume very simple and easy.</p>
               </div>
